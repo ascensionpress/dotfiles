@@ -126,6 +126,7 @@ if ! command -v brew >/dev/null; then
 fi
 
 # ruby
+brew install libyaml
 brew install icu4c
 brew install autoconf
 RUBY_VERSION=1.9.3-p551
