@@ -4,10 +4,17 @@ All you need to set up a development environment to contriubte to Ascension Pres
 
 ## Installation
 
+Before you run any of the setup scripts, there are some things you should do first:
+
+1. Install XCode for OSX, this will install git. The dotfiles presuppose that git is already installed.
+2. Execute the following:
 ```bash
-git clone https://github.com/mathiasbynens/dotfiles.git
+mkdir ~/Projects
+cd ~/Projects
+git clone https://github.com/ascensionpress/dotfiles.git
 cd dotfiles
-./bootstrap.sh
+bash brew.sh
+bash bootstrap.sh
 ```
 
 When setting up a new Mac, you may want to set some sensible OS X defaults:
