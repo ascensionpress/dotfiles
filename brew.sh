@@ -72,16 +72,13 @@ brew install qt
 brew install libyaml
 brew install icu4c
 brew install autoconf
-RUBY_VERSION=1.9.3-p550
+RUBY_VERSION=2.1.6p336
 brew install rbenv
 brew install ruby-build
 
 if [[ `rbenv global` != $RUBY_VERSION ]]; then
 	# stuck on 1.9.x on an older rails project
 	rbenv install $RUBY_VERSION
-
-	# some newer projects are on 2.0
-	rbenv install 2.0.0-p451
 
 	rbenv rehash
 	rbenv global $RUBY_VERSION
@@ -110,7 +107,7 @@ gem install notes
 gem install powder
 gem install bundle
 
-rbenv version 2.0.0-p451
+rbenv version 2.1.6p336
 gem install cocoapods
 rbenv version $RUBY_VERSION
 
