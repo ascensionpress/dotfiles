@@ -13,12 +13,13 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   	--exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "README.md" --exclude "ssh_config" -av . ~
 fi
 
+# Replace ssh config
 cp -f ./ssh_config ~/.ssh/config
 
-mkdir -p ~/Sites/logs
-sudo rm /etc/apache2/other/*
-sudo cp -f apache.conf /etc/apache2/other/vhosts.conf
+# configure apache2
+./apache2_update.sh
 
+# mysql config
 sudo cp -f my.cnf /etc/my.cnf
 
 source "$HOME/.bash_profile"
